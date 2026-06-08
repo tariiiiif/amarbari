@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GhorBari Rajshahi</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<nav class="navbar">
+<div class="logo">GHORBARI</div>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#properties">Properties</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section id="home" class="hero">
+<div class="hero-content">
+<span class="badge">Premium Real Estate in Rajshahi</span>
+<h1>Find Your Dream Apartment</h1>
+<p>Luxury flats and investment opportunities across Rajshahi.</p>
+<a href="#properties" class="btn">Explore <span id="propertyCount">0</span> Properties</a>
+</div>
+</section>
+
+<section class="stats">
+<div><h2 class="counter" data-target="500">0</h2><p>Families Served</p></div>
+<div><h2 class="counter" data-target="25">0</h2><p>Projects</p></div>
+<div><h2 class="counter" data-target="10">0</h2><p>Years Experience</p></div>
+</section>
+
+<section id="properties">
+<h2>Featured Properties</h2>
+<div class="filters">
+<select id="locationFilter">
+<option value="">All Locations</option>
+<option value="Upashahar">Upashahar</option>
+<option value="Kazla">Kazla</option>
+</select>
+<input type="range" id="priceRange" min="5000000" max="10000000" value="10000000">
+<span id="priceValue"></span>
+</div>
+
+<div class="property-grid">
+<div class="property-card" data-location="Upashahar" data-price="8500000">
+<img src="front.jpg">
+<div class="info"><h3>Luxury Heights</h3><p>Upashahar</p><p>৳85,00,000</p><button onclick="openModal(0)">View Details</button></div>
+</div>
+
+<div class="property-card" data-location="Kazla" data-price="6500000">
+<img src="cover.jpg">
+<div class="info"><h3>Green Residency</h3><p>Kazla</p><p>৳65,00,000</p><button onclick="openModal(1)">View Details</button></div>
+</div>
+</div>
+</section>
+
+<section id="about"><h2>About GhorBari</h2><p>Helping families find homes in Rajshahi.</p></section>
+<section id="contact"><h2>Contact</h2><p>Phone: 01646604546</p><p>Email: tariiiiif@gmail.com</p></section>
+
+<div id="modal" class="modal"><div class="modal-box"><span class="close" onclick="closeModal()">×</span><div id="modalBody"></div></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>

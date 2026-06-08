@@ -1,0 +1,222 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #08111f;
+    color: #ffffff;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 8%;
+
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.7)
+        ),
+        url("rajshahi.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin: 20px 0;
+}
+
+.badge {
+    color: #d4af37;
+}
+
+
+.btn {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background-color: #d4af37;
+    color: black;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 40px;
+}
+
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+
+    padding: 80px 20px;
+}
+
+.stats h2 {
+    font-size: 3rem;
+    color: #d4af37;
+}
+
+#properties,
+#about,
+#contact {
+    padding: 90px 5%;
+}
+
+#properties h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+
+.property-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 25px;
+}
+
+.property-card {
+    background-color: #121c2d;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+}
+
+.property-card img {
+    width: 100%;
+    height: 240px;
+
+    object-fit: cover;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info button {
+    margin-top: 10px;
+    padding: 10px 15px;
+
+    background-color: #d4af37;
+
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.modal {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-box {
+    max-width: 900px;
+    margin: 40px auto;
+
+    padding: 20px;
+
+    background-color: #121c2d;
+}
+
+.close {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
